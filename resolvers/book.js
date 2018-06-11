@@ -6,7 +6,7 @@ exports.resolvers = {
   Query: {
     books: () => books.map(book => ({
       ...book,
-      author: authors.find(author => book.author = author.id)
+      author: authors.find(author => book.author === author.id)
     }))
   },
 };
